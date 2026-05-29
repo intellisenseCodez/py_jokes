@@ -1,0 +1,17 @@
+# name of your workflow
+name: CI/CD Workflow for my Joke API
+
+# trigger
+on:
+    workflow_dispatch 
+
+jobs:
+    code-checker:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: first step
+              run: pwd
+
+
+
