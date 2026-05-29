@@ -15,11 +15,19 @@ jobs:
               with:
                 repository: ${{ github.repository }}
 
-            - name: display pwd
-              run: pwd
+            - name: update packages
+              run: |
+               sudo apt update
+               sudo apt -y upgrade
 
-            - name: list content
-              run: ls
+            - name: Install python and dependencies
+              run: |
+                sudo apt install -y python3-pip
+
+
+            - name: run code
+              run: |
+                python3 app.py
 
 
 
