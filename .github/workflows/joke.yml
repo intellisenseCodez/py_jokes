@@ -10,7 +10,12 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: display present work diretory
+            - name: checkout git repo
+            - uses: actions/checkout@v6
+              with:
+                repository: ${{ github.repository }}
+
+            - name: display pwd
               run: pwd
 
             - name: list content
